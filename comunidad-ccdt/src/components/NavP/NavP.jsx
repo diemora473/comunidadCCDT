@@ -32,7 +32,7 @@ export default function ThreeTierPricing() {
     return (
         <Box py={12} mt={20}>
             <VStack spacing={2} textAlign="center">
-                <Heading as="h1" fontSize="4xl">
+                <Heading as="h1" fontSize="4xl" className='dark:text-white'>
                     !Queremos conocerte!
                 </Heading>
                 <Text fontSize="lg" color={'gray.500'}>
@@ -48,51 +48,62 @@ export default function ThreeTierPricing() {
             >
                 <PriceWrapper>
                     <Box py={4} px={12}>
-                        <Text fontWeight="500" fontSize="2xl">
+                        <Text fontWeight="500" fontSize="2xl" className='dark:text-white'>
                             Mensajeria
                         </Text>
                         <HStack justifyContent="center">
-                            <Text fontSize="xl" color="gray.500">
+                            <Text fontSize="xl" color="gray.500" className='dark:text-white'>
                                 Podes escribirnos a
                             </Text>
                         </HStack>
                         <HStack justifyContent="center">
-                            <Text fontSize="xl" color="gray.500">
+                            <Text fontSize="xl" color="gray.500" className='dark:text-white'>
                                 nuestro Whatsapp.
                             </Text>
                         </HStack>
                     </Box>
                     <VStack
-                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        // bg={useColorModeValue('gray.50', 'gray.700')}
                         py={4}
                         borderBottomRadius={'xl'}>
                         <List spacing={3} textAlign="start" px={12}>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Mandanos tu pedido de oracion.
+                                <div className='dark:text-white'>
+
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Mandanos tu pedido de oracion.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Te llegaran las ultimas noticias.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Te llegaran las ultimas noticias.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Podremos estar en contacto.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Podremos estar en contacto.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Estamos para ayudarte.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Estamos para ayudarte.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                5TB Lorem, ipsum dolor.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    5TB Lorem, ipsum dolor.
+                                </div>
                             </ListItem>
                         </List>
                         <Box w="80%" pt={7}>
                             <Button w="full" colorScheme={'blue'}
-                                className='dark:bg-green-400'
+                                className='dark:bg-green-400 dark:hover:bg-green-500'
                             >
-                                <div className='dark:text-black dark:bg-green-400'>
+                                <div className='dark:text-white '>
 
                                     Ver Mas!
                                 </div>
@@ -117,56 +128,69 @@ export default function ThreeTierPricing() {
                                 fontSize="sm"
                                 fontWeight="600"
                                 rounded="xl"
-                                className='dark:bg-green-400'>
+                                className='dark:bg-green-400 dark:text-white'>
 
                                 Mejor Opcion
                             </Text>
                         </Box>
                         <Box py={4} px={12}>
-                            <Text fontWeight="500" fontSize="2xl">
+                            <Text fontWeight="500" fontSize="2xl" className='dark:text-white'>
                                 Conoce nuestra casa
                             </Text>
                             <HStack justifyContent="center">
-                                <Text fontSize="xl" color="gray.500">
+                                <Text fontSize="xl" color="gray.500" className='dark:text-white'>
                                     Cuentanos tu testimonio,
                                 </Text>
                             </HStack>
                             <HStack justifyContent="center">
-                                <Text fontSize="xl" color="gray.500">
+                                <Text fontSize="xl" color="gray.500" className='dark:text-white'>
                                     Queremos ayudarte.
                                 </Text>
                             </HStack>
                         </Box>
                         <VStack
-                            bg={useColorModeValue('gray.50', 'gray.700')}
+                            // bg={useColorModeValue('gray.50', 'gray.700')}
+                            className='dar:bg-blue-700'
                             py={4}
                             borderBottomRadius={'xl'}>
                             <List spacing={3} textAlign="start" px={12}>
                                 <ListItem>
-                                    <ListIcon as={FaCheckCircle} color="green.500" />
-                                    Gente dispuesta a ayudarte.
+                                    <div className='dark:text-white'>
+                                        <ListIcon as={FaCheckCircle} color="green.500" />
+                                        Gente dispuesta a ayudarte.
+
+                                    </div>
                                 </ListItem>
                                 <ListItem>
-                                    <ListIcon as={FaCheckCircle} color="green.500" />
-                                    Podes acercarte cuando quieras.
+                                    <div className='dark:text-white'>
+                                        <ListIcon as={FaCheckCircle} color="green.500" />
+                                        Podes acercarte cuando quieras.
+                                    </div>
                                 </ListItem>
                                 <ListItem>
-                                    <ListIcon as={FaCheckCircle} color="green.500" />
-                                    Seras bienvenido.
+                                    <div className='dark:text-white'>
+                                        <ListIcon as={FaCheckCircle} color="green.500" />
+                                        Seras bienvenido.
+                                    </div>
+                                </ListItem>
+
+                                <ListItem>
+                                    <div className='dark:text-white'>
+                                        <ListIcon as={FaCheckCircle} color="green.500" />
+                                        Podras conocer nuestra casa.
+                                    </div>
                                 </ListItem>
                                 <ListItem>
-                                    <ListIcon as={FaCheckCircle} color="green.500" />
-                                    Podras conocer nuestra casa.
-                                </ListItem>
-                                <ListItem>
-                                    <ListIcon as={FaCheckCircle} color="green.500" />
-                                    Estamos para escucharte.
+                                    <div className='dark:text-white'>
+                                        <ListIcon as={FaCheckCircle} color="green.500" />
+                                        Estamos para escucharte.
+                                    </div>
                                 </ListItem>
                             </List>
                             <Box w="80%" pt={7}>
                                 <Button w="full" colorScheme="blue" className='dark:bg-green-400
                                 dark:hover:bg-green-500'>
-                                    <div className='dark:text-black '>
+                                    <div className='dark:text-white '>
 
                                         Ver Mas!
                                     </div>
@@ -177,48 +201,59 @@ export default function ThreeTierPricing() {
                 </PriceWrapper>
                 <PriceWrapper>
                     <Box py={4} px={12}>
-                        <Text fontWeight="500" fontSize="2xl">
+                        <Text fontWeight="500" fontSize="2xl" className='dark:text-white'>
                             Siguenos!
                         </Text>
                         <HStack justifyContent="center">
-                            <Text fontSize="xl" color="gray.500">
+                            <Text fontSize="xl" color="gray.500" className='dark:text-white'>
                                 ¿Te perdiste de algo?
                             </Text>
                         </HStack>
                         <HStack justifyContent='center'>
-                            <Text fontSize="xl" color="gray.500">
+                            <Text fontSize="xl" color="gray.500" className='dark:text-white'>
                                 Mira nuestras reuniones
                             </Text>
                         </HStack>
                     </Box>
                     <VStack
-                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        // bg={useColorModeValue('gray.50', 'gray.700')}
                         py={4}
                         borderBottomRadius={'xl'}>
                         <List spacing={3} textAlign="start" px={12}>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Estamos en redes sociales.
+                                <div className='dark:text-white'>
+
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Estamos en redes sociales.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Tenemos canal de Youtube.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Tenemos canal de Youtube.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Enterate de las ultimas noticias.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Enterate de las ultimas noticias.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                Mira nuestras reuniones Online.
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    Mira nuestras reuniones Online.
+                                </div>
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={FaCheckCircle} color="green.500" />
-                                .
+                                <div className='dark:text-white'>
+                                    <ListIcon as={FaCheckCircle} color="green.500" />
+                                    .
+                                </div>
                             </ListItem>
                         </List>
                         <Box w="80%" pt={7}>
-                            <Button w="full" colorScheme={'blue'} className='dark:bg-green-400'>
+                            <Button w="full" colorScheme={'blue'} className='dark:bg-green-400 dark:hover:bg-green-500'>
                                 Ver Mas!
                             </Button>
                         </Box>

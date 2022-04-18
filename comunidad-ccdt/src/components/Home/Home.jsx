@@ -1,4 +1,6 @@
 import React from "react";
+import SplitWithImage from "../Contact/Contact";
+import LargeWithLogoCentered from "../Final/Final";
 import Footers from "../Footers/Footers";
 import '../Footers/Footers.css'
 import ThreeTierPricing from "../NavP/NavP";
@@ -26,6 +28,12 @@ const Home = () => {
             </div>
             <div>
                 <ArticleList />
+            </div>
+            <div>
+                <SplitWithImage />
+            </div>
+            <div>
+                <LargeWithLogoCentered />
             </div>
         </div>
     )

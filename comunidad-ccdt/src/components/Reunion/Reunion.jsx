@@ -58,7 +58,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 
 const ArticleList = () => {
     return (
-        <Container maxW={'full'} p="12" bg={'#131313'}>
+        <Container maxW={'full'} p="12" bg={'#131313'} className='dark:bg-blue-800'>
             <Box
                 marginTop={{ base: '1', sm: '5' }}
                 display="flex"
@@ -75,24 +75,26 @@ const ArticleList = () => {
                         zIndex="2"
                         marginLeft={{ base: '0', sm: '5%' }}
                         marginTop="5%">
-                        <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                            <Image
-                                borderRadius="lg"
-                                src={
-                                    'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-                                }
-                                alt="some good alt text"
-                                objectFit="contain"
-                            />
-                        </Link>
+
+                        <Image
+                            borderRadius="lg"
+                            src={
+                                'https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000'
+                            }
+                            alt="some good alt text"
+                            objectFit="contain"
+                        />
                     </Box>
-                    <Box zIndex="3" width="100%" position="absolute" height="100%">
+                    <Box zIndex="1" width="100%" position="absolute" height="100%">
                         <Box
                             bgGradient={useColorModeValue(
-                                'radial(blue.500 1px, transparent 1px)',
+                                'radial(blue.400 1px, transparent 1px)',
+                                'radial(blue.300 1px, transparent 1px)'
                             )}
+                            // className='radial(blue-400 1px, transparent 1px)
+                            // radial(blue.300 1px, transparent 1px)'
                             backgroundSize="20px 20px"
-                            opacity="0.7"
+                            opacity="0.4"
                             height="100%"
                         />
                     </Box>
@@ -105,12 +107,10 @@ const ArticleList = () => {
                     marginTop={{ base: '1', sm: '0' }}>
                     {/* <BlogTags tags={['Engineering', 'Product']} /> */}
                     <Heading>
-                        <Link >
-                            <div className='text-white font-bold pb-20'>
+                        <div className='text-white font-bold pb-14'>
 
-                                Reuniones
-                            </div>
-                        </Link>
+                            Reuniones
+                        </div>
                     </Heading>
                     <Text
                         as="p"
@@ -124,7 +124,7 @@ const ArticleList = () => {
                         as="p"
                         marginTop="2"
                         // color={useColorModeValue('gray.700', 'white')}
-                        className='text-white flex justify-start'
+                        className='text-white flex justify-start pt-5 pl-10'
                         fontSize="lg"
                     >
                         Domingo
@@ -133,7 +133,7 @@ const ArticleList = () => {
                         as="p"
                         marginTop="2"
                         // color={useColorModeValue('gray.700', 'white')}
-                        className='text-white flex justify-start'
+                        className='text-white flex justify-start pt-5 pl-10'
                         fontSize="lg"
                     >
                         Sabado

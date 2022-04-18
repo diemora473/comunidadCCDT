@@ -5,7 +5,7 @@ import Home from './components/Home/Home'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-slate-900">
       <BrowserRouter>
         <Routes>
           <Route exact path='/home' element={<Home />} />
