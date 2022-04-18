@@ -7,15 +7,18 @@ import {
     Button,
     createIcon,
 } from '@chakra-ui/react';
-import Home from '../Home/Home';
+import Carrousell from '../Carrousell/Carrousell';
+import Simple from '../NavBar/Nav';
 
 export default function Footers() {
     return (
-        <Container maxW={'full'}>
+        < Container maxW={'full'} top={10} >
+            <Simple />
+
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
-                py={{ base: 20, md: 28 }}
+                py={{ base: 10, md: 28 }}
                 direction={{ base: 'column', md: 'row' }}
             >
                 <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -25,6 +28,7 @@ export default function Footers() {
                         fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
                         <Text
                             as={'span'}
+                            className='text-black'
                             position={'relative'}
                             _after={{
                                 content: "''",
@@ -33,17 +37,18 @@ export default function Footers() {
                                 position: 'absolute',
                                 bottom: 1,
                                 left: 0,
-                                bg: 'red.400',
+                                // bg: 'red.600',
+
                                 zIndex: -1,
                             }}>
-                            Write once,
+                            !Bienvenido
                         </Text>
                         <br />
-                        <Text as={'span'} color={'red.400'}>
-                            use everywhere!
+                        <Text as={'span'} className='text-blue-500 italic'>
+                            A nuestra Casa!
                         </Text>
                     </Heading>
-                    <Text color={'gray.500'}>
+                    <Text className='text-black font-bold dark:text-white'>
                         Snippy is a rich coding snippets app that lets you create your own
                         code snippets, categorize them, and even sync them in the cloud so
                         you can use them anywhere. All that is free!
@@ -57,18 +62,18 @@ export default function Footers() {
                             fontWeight={'normal'}
                             px={6}
                             colorScheme={'red'}
-                            bg={'red.400'}
-                            _hover={{ bg: 'red.500' }}>
+                            bg={'blue.400'}
+                            _hover={{ bg: 'blue.500' }}>
                             Get started
                         </Button>
-                        <Button
+                        {/* <Button
                             rounded={'full'}
                             size={'lg'}
                             fontWeight={'normal'}
                             px={6}
                             leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
                             How It Works
-                        </Button>
+                        </Button> */}
                     </Stack>
                 </Stack>
                 <Flex
@@ -86,11 +91,12 @@ export default function Footers() {
               zIndex={-1}
               color={useColorModeValue('red.50', 'red.400')}
             /> */}
-                    <Home />
+                    <Carrousell />
 
                 </Flex>
             </Stack>
         </Container >
+
     );
 }
 
