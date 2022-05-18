@@ -8,7 +8,7 @@ function App() {
     <div className="App dark:bg-slate-900">
       <BrowserRouter>
         <Routes>
-          <Route exact path='/home' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
