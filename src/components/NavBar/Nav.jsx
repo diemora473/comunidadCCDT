@@ -18,7 +18,6 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import ccdt from '../images/ccdt.jpg'
-import { NavP } from '../NavP/NavP';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
