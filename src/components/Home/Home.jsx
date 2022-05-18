@@ -26,9 +26,9 @@ const Home = () => {
             <div>
                 <WeeklyActivities />
             </div>
-            <div>
+            {/* <div>
                 <ArticleList />
-            </div>
+            </div> */}
             <div>
                 <SplitWithImage />
             </div>

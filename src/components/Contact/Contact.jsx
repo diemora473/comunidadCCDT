@@ -76,10 +76,6 @@ export default function SplitWithImage() {
 
                                 Tambien nos puedes enviar un Mensaje, apretando la opcion de abajo!.
                             </div>
-                            <div className='pt-0'>
-
-                                Tambien nos puedes enviar un Mensaje, apretando la opcion de abajo!.
-                            </div>
                         </Text>
 
                         <Button

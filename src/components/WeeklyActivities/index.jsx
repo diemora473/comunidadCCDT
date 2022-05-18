@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import {
     Box,
     Stack,
@@ -10,7 +10,11 @@ import {
     List,
     ListItem,
     ListIcon,
-    Button,
+    TabList,
+    Tabs,
+    Tab,
+    useInterval,
+    useBoolean
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
 import Week from './activities.json'
@@ -30,23 +34,31 @@ function CardWrapper({ children }) {
 }
 
 export default function WeeklyActivities() {
-    const [currentActivitiesDay, setCurrentDay] = useState('Lunes')
+    const tabsContainerRef = useRef(null)
+    const tabsContainerWidth = tabsContainerRef?.current?.clientWidth
+    const [currentActivitiesDay, setCurrentDay] = useState(0)
+    const [tabsWidth, setTabsWidth] = useState(tabsContainerWidth)
+    const [autoPlay, controlAutoPlay] = useBoolean(true)
+
+    useEffect(() => {
+        if(tabsContainerWidth)
+            setTabsWidth(tabsContainerWidth)
+    }, [tabsContainerWidth])
+
+    useInterval(
+        () => autoPlay && setCurrentDay((prev) => prev >= 6 ? 0 : prev+1), 
+        5000
+    )
+
     return (
         <Box py={12} mt={20}>
-            <VStack spacing={2} textAlign="center">
-                <Heading as="h1" fontSize="4xl" className='dark:text-white'>
-                    !Queremos conocerte!
-                </Heading>
-                <Text fontSize="lg" color={'gray.500'}>
-                    Ponte en contacto con nosotros de la siguientes maneras!
-                </Text>
-            </VStack>
             <Stack
                 direction={{ base: 'column', md: 'row' }}
                 textAlign="center"
                 justify="center"
                 spacing={{ base: 4, lg: 10 }}
                 py={10}
+                ref={tabsContainerRef}
             >
                 <CardWrapper>
                     <Box py={4} px={12}>
@@ -54,6 +66,28 @@ export default function WeeklyActivities() {
                             Actividades
                         </Text>
                     </Box>
+                    <Tabs index={currentActivitiesDay} isFitted>
+                        <TabList 
+                            overflowY="hidden"
+                            sx={{
+                                scrollbarWidth: 'none',
+                                '::-webkit-scrollbar': {
+                                display: 'none',
+                                },
+                            }}
+                            width={tabsWidth < 600 ? `${tabsWidth}px` : 'auto'}>
+                            {Object.keys(Week).map((day, index) => (
+                                <Tab 
+                                    onClick={() => {
+                                        setCurrentDay(index)
+                                        controlAutoPlay.off()
+                                    }} 
+                                    margin={1}>
+                                    {day}
+                                </Tab>
+                            ))}
+                        </TabList>
+                    </Tabs>
                     <Box
                         // bg={useColorModeValue('gray.50', 'gray.700')}
                         py={4}
@@ -61,8 +95,9 @@ export default function WeeklyActivities() {
                         borderBottomRadius={'xl'}
                         display='flex'
                         flexDirection={{base: 'column', md: 'row'}}
+                        alignItems={{base: 'center', md: 'start'}}
                         >
-                        {Week[currentActivitiesDay].map(({place, activities}) => (
+                        {Object.values(Week)[currentActivitiesDay].map(({place, activities}) => (
                             <List spacing={3} marginTop={{base: '10', md: '0'}} textAlign="start" px={12}>
                                 <Text fontWeight="500" fontSize="1xl" className='dark:text-white'>
                                     {place}
@@ -78,20 +113,6 @@ export default function WeeklyActivities() {
                             </List>
                         ))}
                     </Box>
-                    <VStack
-                        // bg={useColorModeValue('gray.50', 'gray.700')}
-                        py={4}
-                        borderBottomRadius={'xl'}
-                        overflowX={{base:'auto'}}
-                        >
-                        <List spacing={3}  px={12}>
-                            {Object.keys(Week).map((day) => (
-                                <Button onClick={() => setCurrentDay(day)} margin={1}>
-                                    {day}
-                                </Button>
-                            ))}
-                        </List>
-                    </VStack>
                 </CardWrapper>
             </Stack>
         </Box >
