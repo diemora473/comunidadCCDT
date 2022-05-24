@@ -42,15 +42,22 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue('blue.400', 'gray.900')} px={3} borderRadius='11'  >
-        <Flex h={16} mt={0} w={10} alignItems={'center'} justifyContent={'space-between'}
-          width={'full'}>
+      <Box bg={useColorModeValue('blue.400', 'gray.900')} px={3} left={10} borderRadius='11' width={'full'} >
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}
+          width={'96'}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
-            display={{ md: 'none' }}
+            display={{ md: 'none', }}
+
             onClick={isOpen ? onClose : onOpen}
+          />
+          <Avatar
+            size={'sm'}
+            src={
+              ccdt
+            }
           />
           <HStack spacing={8} alignItems={'center'}>
             <HStack
@@ -65,18 +72,14 @@ export default function Simple() {
           </HStack>
           <Flex alignItems={'center'}>
             <Menu>
+
               <MenuButton
                 as={Button}
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
                 minW={0}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    ccdt
-                  }
-                />
+
               </MenuButton>
               <MenuList>
                 <MenuItem>CCDT Kids</MenuItem>

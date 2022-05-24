@@ -14,11 +14,12 @@ export default function Footers() {
     return (
         < Container maxW={'full'} top={10} >
             <Simple />
-
+            <Carrousell />
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
                 py={{ base: 10, md: 28 }}
+                // position={absolute}
                 direction={{ base: 'column', md: 'row' }}
             >
                 <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -28,12 +29,13 @@ export default function Footers() {
                         fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
                         <Text
                             as={'span'}
-                            className='text-black'
+                            className='text-white'
                             position={'relative'}
                             _after={{
                                 content: "''",
                                 width: 'full',
                                 height: '30%',
+
                                 position: 'absolute',
                                 bottom: 1,
                                 left: 0,
@@ -44,11 +46,11 @@ export default function Footers() {
                             !Bienvenido
                         </Text>
                         <br />
-                        <Text as={'span'} className='text-blue-500 italic'>
+                        <Text as={'span'} className='text-blue-500 italic' position={'relative'} >
                             A nuestra Casa!
                         </Text>
                     </Heading>
-                    <Text className='text-black font-bold dark:text-white'>
+                    <Text className='text-black font-bold dark:text-white' position={'relative'}>
                         Snippy is a rich coding snippets app that lets you create your own
                         code snippets, categorize them, and even sync them in the cloud so
                         you can use them anywhere. All that is free!
@@ -76,13 +78,7 @@ export default function Footers() {
                         </Button> */}
                     </Stack>
                 </Stack>
-                <Flex
-                    flex={1}
-                    justify={'center'}
-                    align={'center'}
-                    position={'relative'}
-                    w={'full'}>
-                    {/* <Blob
+                {/* <Blob
               w={'150%'}
               h={'150%'}
               position={'absolute'}
@@ -91,10 +87,10 @@ export default function Footers() {
               zIndex={-1}
               color={useColorModeValue('red.50', 'red.400')}
             /> */}
-                    <Carrousell />
 
-                </Flex>
+
             </Stack>
+
         </Container >
 
     );

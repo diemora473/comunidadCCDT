@@ -12,17 +12,17 @@ const Home = () => {
 
         <div className="App">
 
-            <div className='bg'>
+            {/* <div className='bg'> */}
 
-                <div className="wave w1  ">
+            {/* <div className="wave w1  ">
 
-                </div>
+                </div> */}
 
-                <div className="dark:black w1">
-                </div>
-                <Footers />
-
+            <div className="dark:black w1">
             </div>
+            <Footers />
+
+            {/* </div> */}
             <div>
                 <ThreeTierPricing />
             </div>
