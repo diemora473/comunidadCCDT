@@ -112,6 +112,7 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Footers from '../Footers/Footers'
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
+import ccdt from '../images/ccdt.jpg'
 
 // Settings for the slider
 const settings = {
@@ -138,11 +139,10 @@ export default function Carrousell() {
 
     // These are the images used in the slide
     const cards = [
-        'https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+
         'https://images.unsplash.com/photo-1627875764093-315831ac12f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
         'https://images.unsplash.com/photo-1571432248690-7fd6980a1ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
     ];
-
     return (
 
         <Box
@@ -196,8 +196,9 @@ export default function Carrousell() {
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {cards.map((url, index) => (
                     <Box
+                        className='bg-fixed lg:w-96'
                         key={index}
-                        height={'6xl'}
+                        height={'2xl'}
                         width={'full'}
                         position="relative"
                         backgroundPosition="center"

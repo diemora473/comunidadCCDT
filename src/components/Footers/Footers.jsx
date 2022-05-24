@@ -58,7 +58,7 @@ export default function Footers() {
                     <Stack
                         spacing={{ base: 4, sm: 6 }}
                         direction={{ base: 'column', sm: 'row' }}>
-                        <Button
+                        {/* <Button
                             rounded={'full'}
                             size={'lg'}
                             fontWeight={'normal'}
@@ -67,7 +67,7 @@ export default function Footers() {
                             bg={'blue.400'}
                             _hover={{ bg: 'blue.500' }}>
                             Get started
-                        </Button>
+                        </Button> */}
                         {/* <Button
                             rounded={'full'}
                             size={'lg'}
