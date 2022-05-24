@@ -3,7 +3,7 @@ import SplitWithImage from "../Contact/Contact";
 import LargeWithLogoCentered from "../Final/Final";
 import Footers from "../Footers/Footers";
 import '../Footers/Footers.css'
-import ThreeTierPricing from "../NavP/NavP";
+import WeeklyActivities from "../WeeklyActivities";
 import ArticleList from "../Reunion/Reunion";
 
 
@@ -24,11 +24,11 @@ const Home = () => {
 
             {/* </div> */}
             <div>
-                <ThreeTierPricing />
+                <WeeklyActivities />
             </div>
-            <div>
+            {/* <div>
                 <ArticleList />
-            </div>
+            </div> */}
             <div>
                 <SplitWithImage />
             </div>
