@@ -7,8 +7,8 @@ import {
     useColorModeValue,
     Button,
 } from '@chakra-ui/react';
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from '../../assets/icons';
-import logo from '../images/logo.png'
+import { FacebookIcon, InstagramIcon, YoutubeIcon } from '../../../assets/icons';
+import logo from '../../../assets/logo.png'
 
 const Logo2 = () => (
     <div className=' flex font-bold '>
@@ -28,7 +28,7 @@ const socialMedia = [
     {icon: YoutubeIcon, url: 'https://www.youtube.com/channel/UC4LN7Tzs4_tf1EC-OkQZBow', alt: 'Youtube social icon'},
 ]
 
-export default function LargeWithLogoCentered() {
+export default function Footer() {
     return (
         <Box
             className='bg-white'

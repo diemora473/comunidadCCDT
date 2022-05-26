@@ -66,7 +66,7 @@ export default function WeeklyActivities() {
                             Actividades
                         </Text>
                     </Box>
-                    <Tabs index={currentActivitiesDay} isFitted>
+                    <Tabs variant={'unstyled'} index={currentActivitiesDay} isFitted>
                         <TabList 
                             overflowY="hidden"
                             sx={{
@@ -82,14 +82,15 @@ export default function WeeklyActivities() {
                                         setCurrentDay(index)
                                         controlAutoPlay.off()
                                     }} 
-                                    margin={1}>
+                                    margin={1}
+                                    _selected={{color: '#0bbaae', borderBottom: '2px solid #0bbaae', fontWeight: 'bold'}}
+                                >
                                     {day}
                                 </Tab>
                             ))}
                         </TabList>
                     </Tabs>
                     <Box
-                        // bg={useColorModeValue('gray.50', 'gray.700')}
                         py={4}
                         margin='3'
                         borderBottomRadius={'xl'}
@@ -105,7 +106,7 @@ export default function WeeklyActivities() {
                                 {activities.map((item) => (
                                     <ListItem>
                                         <div className='dark:text-white'>
-                                            <ListIcon as={FaCheckCircle} color="green.500" />
+                                            <ListIcon as={FaCheckCircle} color={"#0bbaae"} />
                                             {item}
                                         </div>
                                     </ListItem>

@@ -1,0 +1,36 @@
+.titleContainer {
+    background-image: url('../../../assets/titleBG.png');
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 213px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+    flex-direction: column;
+}
+.titleContainer h1 {
+    font-family: 'Courgette';
+    font-size: 40px;
+    color: #ffff;
+}
+.titleContainer h2 {
+    font-family: 'Courgette';
+    font-size: 20px;
+    color: #ffff;
+}
+
+@media (max-width: 700px) {
+    .titleContainer {
+        transform: scale(0.7) translate(-70%, -85%) ;
+    }
+}
+
+@media (max-width: 470px) {
+    .titleContainer {
+        transform: scale(0.5) translate(-100%, -120%) ;
+    }
+}
